@@ -186,7 +186,7 @@ function SetDate(){
     let months = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
     let date = new Date();
 
-    let day = date.getDay() - 1; //Se resta 1 porque el array de los dias empieza en 0 (index).
+    let day = date.getDay();
     let dateNumber = date.getDate();
     let month = date.getMonth();
     let hour = date.getHours();
