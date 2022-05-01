@@ -133,16 +133,21 @@ function OnEdit(element, index){
     }else{
         submenu.style.display = "none";
     }
+    //MOSTRAR MENU PARA EDITAR LA NOTA
     let editMenu = submenu.querySelector(".edit-submenu");
     editMenu.onclick = ()=>{
         submenu.style.display = "none";
         ShowEditMenu(index)
     };
 
+    //ELIMINAR LA NOTA
     let deleteMenu = submenu.querySelector(".delete-submenu");
     deleteMenu.onclick = ()=>{
-        submenu.style.display = "none";
-        DeleteNote(index);
+        //Ventana de confirmación por si se elimina la nota por error.
+        if(window.confirm(`¿Eliminar nota del título "${notes[index].title}"? 😪`)){
+            submenu.style.display = "none";
+            DeleteNote(index);
+        }
     };
 }
 
