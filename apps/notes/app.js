@@ -133,21 +133,16 @@ function OnEdit(element, index){
     }else{
         submenu.style.display = "none";
     }
-    //MOSTRAR MENU PARA EDITAR LA NOTA
     let editMenu = submenu.querySelector(".edit-submenu");
     editMenu.onclick = ()=>{
         submenu.style.display = "none";
         ShowEditMenu(index)
     };
 
-    //ELIMINAR LA NOTA
     let deleteMenu = submenu.querySelector(".delete-submenu");
     deleteMenu.onclick = ()=>{
-        //Ventana de confirmación por si se elimina la nota por error.
-        if(window.confirm(`¿Eliminar nota del título "${notes[index].title}"? 😪`)){
-            submenu.style.display = "none";
-            DeleteNote(index);
-        }
+        submenu.style.display = "none";
+        DeleteNote(index);
     };
 }
 
@@ -187,7 +182,7 @@ function SetDate(){
     let timeElement = document.getElementsByClassName("time"); //elementos donde se va a mostrar la hora
     let dateElement = document.getElementsByClassName("date"); //elementos donde se va a mostrar la fecha
 
-    let days = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+    let days = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
     let months = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
     let date = new Date();
 
