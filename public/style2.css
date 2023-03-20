@@ -1,8 +1,8 @@
 :root{
-    --primario: rgb(98, 84, 190);
-    --secundario: rgb(15,15,15);
-    --secundario2: rgb(35,35,35);
-    --terciario: white;
+    --main: rgb(98, 84, 190);
+    --dark: rgb(15,15,15);
+    --dark2: rgb(40,40,40);
+    --light: rgb(230, 230, 230);
     --background: linear-gradient(115deg, rgba(15,15,15) 0%, rgba(35,35,35) 75%, rgb(40, 40, 40) 100%);
 }
 
@@ -17,13 +17,13 @@ body{
 
 footer{
     background-color: rgb(15,15,15);
-    color: var(--primario);
+    color: var(--main);
     padding: 10px 10px;
     text-align: center;
 }
 
 a{
-    color: var(--primario);
+    color: var(--main);
 }
 
 #main{
@@ -40,7 +40,7 @@ a{
     align-items: center;
     justify-content: center;
     background: var(--background);
-    color: var(--terciario);
+    color: var(--light);
     text-align:center;
     height: 100%;
 }
@@ -61,16 +61,16 @@ a{
 
 .title{
     text-align: center;
-    color: var(--primario);
+    color: var(--main);
     font-size: 2.8rem;
-    text-shadow: var(--secundario) 2px 2px;
+    text-shadow: var(--dark) 2px 2px;
     animation: title .5s ease-out;
     animation-fill-mode: forwards;
     margin-bottom: 10px;
 }
 
 .menu{
-    background-color: var(--secundario);
+    background-color: var(--dark);
     width: 100%;
 }
 
@@ -96,8 +96,8 @@ a{
 }
 
 .menu-item a:hover{
-    background-color: var(--primario);
-    color: var(--terciario); 
+    background-color: var(--main);
+    color: var(--light); 
 }
 
 /* TARJETAS DE PROYECTOS */
@@ -116,25 +116,28 @@ a{
 .project-card{
     width: 240px;
     height: 420px;
-    border: var(--primario) dashed 2px;
+    border: var(--main) dashed 2px;
     border-radius: 4px;
-    background-color: var(--secundario2);
+    background-color: var(--dark2);
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
-.project-card p{
+.project-card-description{
     padding-left: 4px;
     padding-right: 4px;
 }
 
-.project-card img{
+.project-card-image{
     max-width: 100%;
 }
 
 .project-card-title{
-    color: var(--primario);
+    color: var(--main);
     font-size: 1.1rem;
-    background-color: var(--secundario);
+    background-color: var(--dark);
+    padding: 2px;
 }
 
 .project-card-tecnologies{
@@ -144,12 +147,12 @@ a{
     flex-wrap: wrap;
     gap: .5rem;
     padding: 4px 4px;
-    color: var(--primario);
+    color: var(--main);
     font-weight: bold;
 }
 
 .project-card-tecnologies div{
-    border: var(--secundario) 1px solid;
+    border: var(--dark) 1px solid;
     padding: 4px;
     border-radius: 4px;
 }
@@ -159,7 +162,7 @@ a{
     width: 100%;
     position: absolute;
     bottom: 0%;
-    background-color: var(--primario);
+    background-color: var(--main);
 }
 
 .project-card-links img{
@@ -180,11 +183,13 @@ a{
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1rem;
+    margin: 4px;
 }
 
 .icon{
     position: relative;
-    border: var(--primario) dashed 2px;
+    border: var(--main) dashed 2px;
+    background-color: var(--dark2);
 }
 
 .icon:hover img{
@@ -215,10 +220,11 @@ a{
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
+    margin: 5px;
 }
 
 .contact-icon-container{
-    border: var(--primario) dashed 2px;
+    border: var(--main) dashed 2px;
     margin: 10px;
 }
 
